@@ -1,0 +1,16 @@
+= form_for Dataset.new do |f|
+  = f.label :title
+  = f.text_field :title
+  
+  = f.label :content
+  = f.text_area :content
+  = f.submit
+
+table
+  tr
+    td name
+    td votes
+  - @datasets.each do |dataset|
+    tr
+      td= link_to dataset.title, dataset
+      td= dataset.votes_for.size

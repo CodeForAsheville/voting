@@ -1,0 +1,15 @@
+html lang="en"
+  head
+    meta charset="utf-8"
+    title CFA Voting
+    = javascript_include_tag 'https://cdn.shopify.com/s/assets/external/app.js'
+    = stylesheet_link_tag 'application', media: 'all'
+    = stylesheet_link_tag '//maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css'
+    = javascript_include_tag 'application'
+    = csrf_meta_tags
+  body
+    .container
+      = yield
+      hr
+        footer
+      span style="display:none"

@@ -1,0 +1,9 @@
+h2= @dataset.title
+p= simple_format @dataset.content
+p
+  b Votes: 
+  = @dataset.votes_for.size
+hr
+
+= form_for @dataset, url: vote_dataset_path, method: :post do |f|
+  = f.submit "Vote!"
